@@ -13,7 +13,7 @@ from statsmodels.stats.weightstats import ztest as ztest
 
 df=pd.read_csv("session_data.csv")
 
-#some general stat
+# some general stats
 df.describe()
 #Uniqueness of session_id
 df["session_id"].nunique()
@@ -31,7 +31,7 @@ def control_test_spl(df):
     
     return df_cont,df_test
 
-#Chi-Squared Test for conversion rate
+# Chi-Squared Test for conversion rate
 
 def chi_test_conv(df):
     df_cont,df_test=control_test_spl(df)
